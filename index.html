@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>So'zlar Testi</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>So'zlar Testi</h1>
+    <div class="menu">
+      <button onclick="showAddWordForm()">Add New Word</button>
+      <button onclick="showWordList()">Words</button>
+      <button onclick="showTest()">Test</button>
+    </div>
+
+    <div id="add-word-form" class="section" style="display:none;">
+      <h2>So'z Qo'shish</h2>
+      <input type="text" id="englishWord" placeholder="Inglizcha so'z">
+      <input type="text" id="uzbekWord" placeholder="O'zbekcha tarjima">
+      <button onclick="addWord()">Qo'shish</button>
+    </div>
+
+    <div id="word-list" class="section" style="display:none;">
+      <h2>Qo'shilgan So'zlar</h2>
+      <ul id="wordList"></ul>
+      <button onclick="deleteAllWords()">Barchasini o'chirish</button>
+    </div>
+
+    <div id="test-section" class="section" style="display:none;">
+      <h2>Test</h2>
+      <ul id="testList"></ul>
+      <button id="finishTest" onclick="finishTest()">Testni yakunlash</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
